@@ -4,7 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<string> VideoGamesNames = new List<string>()
+                { "Guilty Gear 20th Anniversary Pack", "Monark", "Cris Tales", "Xenoblade Chronicles 3" };
+
+            var VideoGames = VideoGamesNames.OrderBy(videoGame => videoGame.Length).ToList();
+
+            foreach (var videoGame in VideoGames)
+            {
+                Console.WriteLine(videoGame);
+            }
+
         }
     }
 }
